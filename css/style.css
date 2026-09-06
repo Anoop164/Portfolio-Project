@@ -1,0 +1,268 @@
+/* =========================================
+   Global Styles
+   ========================================= */
+
+   * {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #111111; /* darker text for better contrast */
+}
+
+/* =========================================
+   Skip Link Accessibility
+   ========================================= */
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 999;
+    padding: 0.75rem 1rem;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+}
+
+/* =========================================
+   Header & Navigation
+   ========================================= */
+
+header {
+    background-color: #1f2937;
+    padding: 1rem 2rem;
+}
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav > a {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav li a:hover,
+nav li a:focus {
+    text-decoration: underline;
+    color: #facc15; /* yellow accent for visibility */
+}
+
+/* =========================================
+   Main Content
+   ========================================= */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+section {
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2.5rem; /* rem units for scalability */
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+/* =========================================
+   Links
+   ========================================= */
+
+a {
+    color: #0056b3;
+}
+
+main a {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+main a:hover,
+main a:focus {
+    text-decoration: underline;
+}
+
+/* =========================================
+   Buttons
+   ========================================= */
+
+button {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #1f2937;
+    border-radius: 6px;
+    background-color: #1f2937;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    background-color: #374151;
+}
+
+/* =========================================
+   Contact Form
+   ========================================= */
+
+form {
+    max-width: 700px;
+    margin-top: 2rem;
+}
+
+form div {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #4b5563; /* darker gray for contrast */
+    border-radius: 6px;
+    font: inherit;
+    background-color: #ffffff;
+    color: #111111; /* stronger text color */
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Keyboard focus indicator */
+
+input:focus,
+textarea:focus,
+button:focus,
+a:focus {
+    outline: 3px solid #2563eb; /* accessible blue */
+    outline-offset: 3px;
+}
+
+/* Required field validation */
+
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+    border-color: #b91c1c;
+}
+
+input:valid,
+textarea:valid {
+    border-color: #15803d;
+}
+
+/* Form helper text */
+
+form p {
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+    color: #333333; /* improved contrast */
+}
+
+/* =========================================
+   Footer
+   ========================================= */
+
+footer {
+    background-color: #1f2937;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* =========================================
+   Responsive Design
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    main {
+        padding: 2rem 1rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}
